@@ -49,17 +49,14 @@ $ http://localhost:8081/ がフロントエンドのURL
 - 必ず日本語で回答してください
 を入力
 
-### OPENAI-API で PR-Review
-- [Qodo Merge](https://qodo-merge-docs.qodo.ai/installation/github/)
-  - GPT-4.1利用
-  - 日本語の回答をするようプロンプト設定
-- GitHub の Repository >> Settings >> Secretes and variables >> Actions の Repository secrets の New repository secret を登録
-  - OPENAI_KEY という名称で OPENAI API keys の SECRET KEY を登録
-    - [OPENAI API keys](https://platform.openai.com/settings/organization/api-keys) 
+### package-json, package-json-lock のアプデ
 ```sh
---- .github/
-           |- workflows/
-                        |-- pr_agent.yml
+$ cd frontend
+$ npx npm-check-updates -u
+$ npx npm-check-updates -u --target minor
+$ npx npm-check-updates -u --target patch
+$ npm install
+cd ..
 ```
 
 ### 参考
